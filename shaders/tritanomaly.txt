@@ -1,0 +1,16 @@
+uniform shader iChunk;
+uniform float2 iChunkSize;
+
+const float3x3 tritanomalyMatrix = float3x3(
+    0.967, 0.033, 0.0,
+    0.0, 0.733, 0.267,
+    0.0, 0.183, 1.0
+);
+
+half4 main(float2 xy) {
+        half4 color = iChunk.eval(xy);
+    
+        float3 correctedColor = tritanomalyMatrix * float3(color.r, color.g, color.b);
+    
+        return half4(correctedColor.x, correctedColor.y, correctedColor.z, color.a);
+}

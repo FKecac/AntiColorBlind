@@ -1,0 +1,16 @@
+uniform shader iChunk;
+uniform float2 iChunkSize;
+
+const float3x3 protanMatrix = float3x3(
+    0.567, 0.433, 0.0,
+    0.558, 0.442, 0.0,
+    0.0, 0.242, 0.758
+);
+
+half4 main(float2 xy) {
+        half4 color = iChunk.eval(xy);
+
+        float3 correctedColor = protanMatrix * float3(color.r, color.g, color.b);
+
+        return half4(correctedColor.x, correctedColor.y, correctedColor.z, color.a);
+}

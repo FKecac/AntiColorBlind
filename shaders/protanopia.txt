@@ -1,0 +1,16 @@
+uniform shader iChunk;
+uniform float2 iChunkSize;
+
+const float3x3 protanopiaMatrix = float3x3(
+    0.0, 1.05118294, -0.05116099,
+    0.0, 1.0, 0.0,
+    0.0, 0.0, 1.0
+);
+
+half4 main(float2 xy) {
+        half4 color = iChunk.eval(xy);
+
+        float3 correctedColor = protanopiaMatrix * float3(color.r, color.g, color.b);
+    
+        return half4(correctedColor.x, correctedColor.y, correctedColor.z, color.a);
+}

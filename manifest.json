@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "AntiColorBlind",
+    "description": "A shader pack with multiple Color-Blind Correction shaders. As I am not colorblind, I am unable to really test these Shaders, however science says they should at least somewhat work!",
+    "version": "1.6",
+    "icons": {
+        "512": "icon_512.png"
+    },
+    "developer": {
+        "name": "Spontifex"
+    },
+    "mod": {
+        "schema_version": 1,
+        "payload": {
+            "shaders": {
+                "Deuteranomaly": "shaders/deuteranomaly.txt",
+                "Deuteranomaly Gamma Correction": "shaders/deuteranomaly_gamma_correction.txt",
+                "Deuteranopia": "shaders/deuteranopia.txt",
+                "Deuteranopia Gamma Correction": "shaders/deuteranopia_gamma_correction.txt",
+                "Protanomaly": "shaders/protanomaly.txt",
+                "Protanomaly Gamma Correction": "shaders/protanomaly_gamma_correction.txt",
+                "Protanopia": "shaders/protanopia.txt",
+                "Protanopia Gamma Correction": "shaders/protanopia_gamma_correction.txt",
+                "Tritanomaly": "shaders/tritanomaly.txt",
+                "Tritanomaly Gamma Correction": "shaders/tritanomaly_gamma_correction.txt",
+                "Tritanopia": "shaders/tritanopia.txt",
+                "Tritanopia Gamma Correction": "shaders/tritanopia_gamma_correction.txt"
+            }
+        }
+    }
+}

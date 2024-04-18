@@ -1,0 +1,16 @@
+uniform shader iChunk;
+uniform float2 iChunkSize;
+
+const float3x3 deutanMatrix = float3x3(
+    0.625, 0.375, 0.0,
+    0.7, 0.3, 0.0,
+    0.0, 0.0, 1.0
+);
+
+half4 main(float2 xy) {
+        half4 color = iChunk.eval(xy);
+
+        float3 correctedColor = deutanMatrix * float3(color.r, color.g, color.b);
+
+        return half4(correctedColor.x, correctedColor.y, correctedColor.z, color.a);
+}
