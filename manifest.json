@@ -2,12 +2,12 @@
     "manifest_version": 3,
     "name": "AntiColorBlind",
     "description": "A shader pack with multiple Color-Blind Correction shaders. As I am not colorblind, I am unable to really test these Shaders, however science says they should at least somewhat work!",
-    "version": "1.6",
+    "version": "1.7",
     "icons": {
         "512": "icon_512.png"
     },
     "developer": {
-        "name": "Spontifex"
+        "name": "Fritz Kecac"
     },
     "mod": {
         "schema_version": 1,
